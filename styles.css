@@ -1,0 +1,497 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url(images.jpg);
+  background-size: cover;
+  background-position: center;
+  /* PRIMARY BACKGROUND: Deep Navy */
+  background-color: #101826; 
+  
+  padding-top: 80px; 
+}
+
+/* --- DESKTOP NAV STYLES (Fixed and Transparent) --- */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    
+    /* BACKGROUND UPDATED: Transparent Navy (90% Opacity) */
+    background: rgba(16, 24, 38, 0.9); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+    padding-left: 8%;
+    padding-right: 8%;
+    transition: all 0.3s ease; 
+}
+
+.logo {
+  color: white;
+  font-size: 35px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+span {
+  /* ACCENT COLOR: Neon Green */
+  color: #aaff00; 
+}
+
+/* Desktop Menu Links Container */
+.nav-links {
+    list-style-type: none;
+    display: flex; 
+}
+
+/* Desktop Menu Link Items */
+.nav-links li {
+  padding: 10px 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700; 
+  font-size: 1.1em; 
+  text-transform: capitalize;
+}
+
+.nav-links li a:hover {
+  /* ACCENT COLOR: Neon Green */
+  color: #aaff00; 
+  transition: 0.4s;
+}
+
+/* Hamburger Icon - Hidden on desktop */
+.menu-toggle {
+    display: none;
+}
+
+/* hero content */
+.content {
+  position: absolute;
+  top: 55%; 
+  left: 8%;
+  transform: translateY(-50%);
+}
+h1 {
+  color: white;
+  margin: 20px 0px 20px;
+  font-size: 75px;
+}
+h3 {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+h4 {
+  /* CLEARER TEXT: White */
+  color: white; 
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.newsletter form {
+  width: 380px;
+  max-width: 100%;
+  position: relative;
+}
+.newsletter form input:first-child {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 130px 14px 15px;
+  /* ACCENT COLOR: Neon Green */
+  border: 2px solid #aaff00; 
+  outline: none;
+  border-radius: 30px;
+}
+
+.newsletter form input:last-child {
+  position: absolute;
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding: 10px 30px;
+  /* ACCENT COLOR: Neon Green */
+  background: #aaff00; 
+  border-radius: 30px;
+  /* Text color set to dark navy for high contrast */
+  color: #101826; 
+  box-shadow: 0px 0px 50px #000, 0px 0px 15px #858585;
+  top: 6px;
+  right: 6px;
+  cursor: pointer;
+}
+
+/* about section styling */
+.about{
+  width: 100%;
+  padding: 100px 0px;
+  /* SECONDARY BACKGROUND: Lighter Navy */
+  background: #192333;
+}
+
+.about img{
+  height: auto;
+  width: 430px;
+}
+
+.main{
+  width: 1130px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about-text h2{
+color: white;
+font-size: 75px;
+text-transform: capitalize;
+margin-bottom: 20px;
+}
+
+.about-text h5{
+  color: white;
+  letter-spacing: 2px;
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+
+.about-text h5 span {
+  /* ACCENT COLOR: Neon Green */
+  color: #aaff00; 
+}
+
+
+.about-text p{
+  /* CLEARER TEXT: White */
+  color: white; 
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 45px;
+  width: 430px;
+}
+
+/* AGER SHADHARON BUTTON STYLE (About Section ebong Hire Me button er jonno) */
+button{
+  /* ACCENT COLOR: Neon Green */
+  background: #aaff00; 
+  /* Text color set to dark navy for high contrast */
+  color: #101826; 
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 30px;
+  border-radius: 30px;
+  transition: transform 0.4s;
+}
+button:hover{
+  background: transparent;
+  /* ACCENT COLOR: Neon Green */
+  border: 2px solid #aaff00; 
+  /* Hover state text is white */
+  color: white; 
+  cursor: pointer;
+}
+
+/* --- NEW STYLE FOR BUTTON-LIKE LINKS (Services/Skills Cards er jonno) --- */
+
+.button-link {
+  /* SAME STYLING AS BUTTON */
+  /* ACCENT COLOR: Neon Green */
+  background: #aaff00; 
+  /* Text color set to dark navy for high contrast */
+  color: #101826; 
+  text-decoration: none; /* Link er underline remove kora */
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 30px;
+  border-radius: 30px;
+  transition: transform 0.4s;
+  
+  /* DISPLAY PROPERTIES TO MAKE IT LOOK LIKE A BLOCK/BUTTON */
+  display: inline-block; 
+  cursor: pointer;
+}
+
+.button-link:hover {
+  /* HOVER STYLING */
+  background: transparent;
+  /* ACCENT COLOR: Neon Green */
+  border: 2px solid #aaff00; 
+  /* Hover state text is white */
+  color: white; 
+}
+
+
+/* services section styling */
+.services{
+  /* PRIMARY BACKGROUND: Deep Navy for Core Services section */
+  background: #101826;
+  width: 100%;
+  padding: 100px 0px;
+}
+
+/* SKILLS SECTION STYLING (To differentiate it visually) */
+#skills-section {
+    /* SECONDARY BACKGROUND: Lighter Navy */
+    background: #192333; 
+    width: 100%;
+    padding: 100px 0px;
+}
+
+
+.title h2{
+  color: white;
+  font-size: 75px;
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* UPDATED: Increased minimum height to accommodate 7+ cards in two rows */
+  min-height: 850px; 
+  flex-wrap: wrap; 
+}
+.card{
+  height: 365px;
+  width: 335px;
+  padding: 20px 35px;
+  /* SECONDARY BACKGROUND: Lighter Navy */
+  background: #192333;
+  border-radius: 20px;
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Service/Skill Cards inside the Skills section should have the darker background */
+#skills-section .card {
+    background: #101826; 
+}
+
+.card i{
+  font-size: 50px;
+  display: block;
+  margin: 25px 0px;
+  /* ACCENT COLOR: Neon Green */
+  color: #aaff00; 
+}
+
+h5{
+  color: white;
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.para p{
+  /* CLEARER TEXT: White */
+  color: white; 
+  font-size: 16px;
+  line-height: 27px;
+  margin-bottom: 25px;
+}
+
+/* contact me section */
+
+.contact-me{
+  width: 100%;
+  height: 290px;
+  /* SECONDARY BACKGROUND: Lighter Navy */
+  background: #192333;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-me p{
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* footer section */
+
+footer{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  /* PRIMARY BACKGROUND: Deep Navy */
+  background: #101826;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p:nth-child(1){
+  font-size: 30px;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+footer p:nth-child(2){
+  font-size: 17px;
+  color: white;
+  width: 500px;
+  text-align: center;
+  line-height: 26px;
+}
+
+.social{
+  display: flex;
+}
+
+.social a{
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* ACCENT COLOR: Neon Green */
+  background: #aaff00; 
+  border-radius: 50%;
+  margin: 22px 10px;
+  /* Icon color is dark navy for contrast */
+  color: #101826; 
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.social a:hover{
+  transform: scale(1.2);
+  transition: .3s;
+}
+
+.end{
+  position: absolute;
+  /* ACCENT COLOR: Neon Green */
+  color: #aaff00; 
+  bottom: 25px;
+  font-size: 14px;
+}
+
+.hidden{
+  display: none;
+}
+
+/* --- MEDIA QUERY FOR MOBILE (max-width: 576px) --- */
+@media only screen and (max-width: 576px){
+  
+  /* 1. Navbar Adjustments for Mobile */
+  nav {
+    padding-top: 20px;
+    padding-bottom: 20px; 
+    justify-content: space-between; 
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  /* Adjust hero content position for mobile fixed nav */
+  .hero {
+      padding-top: 70px; 
+  }
+
+  /* Hide the main menu links on mobile by default */
+  .nav-links{
+    display: none;
+  }
+  
+  /* Style for the open mobile menu (when 'active' class is added by JS) */
+  .nav-links.active {
+      display: flex;
+      flex-direction: column; 
+      width: 100%;
+      position: absolute;
+      top: 60px; 
+      left: 0;
+      /* SECONDARY BACKGROUND: Lighter Navy */
+      background: #192333; 
+      /* ACCENT COLOR: Neon Green */
+      border-top: 1px solid #aaff00; 
+      padding-bottom: 20px;
+      z-index: 999; 
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .nav-links.active li {
+      text-align: center;
+      margin: 10px 0;
+      padding: 5px 0;
+  }
+  
+  /* Display the hamburger icon */
+  .menu-toggle {
+    display: block;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  /* 2. Content and Layout Adjustments */
+  .newsletter form{
+    width: 100%;
+  }
+
+  .main{
+    flex-direction: column; 
+    width: 100%;
+  }
+
+  .about img{
+    width: 100%;
+  }
+
+  .about-text{
+    margin-top: 50px;
+    padding: 0px 15px;
+  }
+  .about-text p{
+    width: 100%;
+  }
+  .contact-me p{
+    line-height: 45px;
+  }
+  /* Updated min-height for mobile to show all cards in one scroll */
+  .box{
+    flex-direction: column;
+    min-height: auto; 
+  }
+  
+  /* Reset Card background for mobile for better stacking visual */
+  #skills-section .card {
+    background: #192333; 
+  }
+
+
+  footer p:nth-child(2){
+    width: 100%;
+    padding: 0px 15px;
+  }
+}
